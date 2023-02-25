@@ -1,4 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { applyMiddleware, createStore } from "redux";
+import thunk from "redux-thunk";
+import { Provider } from "react-redux";
+import reducer, { initialState } from "./store/reducer";
+import App from "./components/App";
 
-ReactDOM.render(<h1>Hello, World!</h1>, document.getElementById("root"));
+import { composeWithDevTools } from "redux-devtools-extension";
+
+const composeEnhancers = composeWithDevTools({});
+const store = createStore(
+    reducer,
+    initialState,
+    composeEnhancers(applyMiddleware(thunk))
+);
+
+const ConnectedApp = () => (
+    <Provider store={store}>
+        <App />
+    </Provider>
+);
+
+ReactDOM.render(<ConnectedApp />, document.getElementById("root"));
