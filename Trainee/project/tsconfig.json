@@ -3,12 +3,20 @@
     "moduleResolution": "node",
     "baseUrl": "./",
     "target": "es6",
-    "module": "es6",
+    "module": "esnext",
+    "lib": ["es6", "dom"],
     "jsx": "react",
     "sourceMap": true,
     "noImplicitAny": false,
-    "esModuleInterop": true
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@images/*": ["./src/resources/img/*"]
+    }
   },
-  "include": ["src/**/*"],
+  "include": ["globals.d.ts", "src/**/*"],
   "exclude": ["node_modules"]
 }

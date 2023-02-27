@@ -1,0 +1,15 @@
+.header_section {
+	z-index: 10000;
+	.navbar {
+		a {
+			color: $color2;
+			transition: all ease-in-out 0.3s;
+		}
+		a:hover {
+			color: $color2-hover;
+		}
+	}
+}
+.logo {
+	filter: invert(1);
+}

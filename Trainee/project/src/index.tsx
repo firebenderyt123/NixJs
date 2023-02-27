@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import * as ReactDOMClient from "react-dom/client";
 import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
 import { Provider } from "react-redux";
@@ -21,4 +21,10 @@ const ConnectedApp = () => (
     </Provider>
 );
 
-ReactDOM.render(<ConnectedApp />, document.getElementById("root"));
+const root = document.getElementById("root")!;
+
+ReactDOMClient.createRoot(root).render(
+    <React.StrictMode>
+        <ConnectedApp />
+    </React.StrictMode>
+);

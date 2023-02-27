@@ -16,6 +16,12 @@ module.exports = {
     "plugin:react-hooks/recommended",
   ],
   settings: {
+    "import/resolver": {
+      alias: {
+        map: [["@images", "./src/resources/img"]],
+        extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
+      },
+    },
     react: {
       version: "detect",
     },
