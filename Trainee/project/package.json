@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.tsx",
   "scripts": {
+    "sitemap": "webpack serve --config webpack.config.sitemap.js",
     "start": "webpack serve --mode development --open",
     "clean": "npm cache clean --force",
     "build": "webpack --mode production",
@@ -29,6 +30,7 @@
     "formik": "^2.2.9",
     "json-server": "^0.17.2",
     "react-redux": "^8.0.5",
+    "react-responsive": "^9.0.2",
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2"
   },
@@ -43,6 +45,7 @@
     "babel-loader": "^9.1.2",
     "bootstrap": "^5.2.3",
     "css-loader": "^6.7.3",
+    "dotenv-webpack": "^8.0.1",
     "eslint": "^8.34.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",

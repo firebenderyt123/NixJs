@@ -7,7 +7,7 @@ import AppAbout from "./pages/About/AppAbout";
 import AppContacts from "./pages/Contacts/AppContacts";
 
 import AppHeader from "./appHeader/AppHeader";
-// import AppFooter from "./appFooter/AppFooter";
+import AppFooter from "./appFooter/AppFooter";
 
 class App extends Component {
     render() {
@@ -21,17 +21,39 @@ class App extends Component {
                                 <>
                                     <AppHeader />
                                     <AppHome />
+                                    <AppFooter />
                                 </>
                             }
                         />
                         <Route
                             path={PagesLinks.Products}
-                            element={<AppProducts />}
+                            element={
+                                <>
+                                    <AppHeader />
+                                    <AppProducts />
+                                    <AppFooter />
+                                </>
+                            }
                         />
-                        <Route path={PagesLinks.About} element={<AppAbout />} />
+                        <Route
+                            path={PagesLinks.About}
+                            element={
+                                <>
+                                    <AppHeader />
+                                    <AppAbout />
+                                    <AppFooter />
+                                </>
+                            }
+                        />
                         <Route
                             path={PagesLinks.Contacts}
-                            element={<AppContacts />}
+                            element={
+                                <>
+                                    <AppHeader />
+                                    <AppContacts />
+                                    <AppFooter />
+                                </>
+                            }
                         />
                         {/*<Route path="*" />*/}
                     </Routes>

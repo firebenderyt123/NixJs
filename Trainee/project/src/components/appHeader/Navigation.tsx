@@ -12,7 +12,7 @@ import Logo from "@images/Bootsy.svg";
 
 const Navigation = () => {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-light bg-primary fs-4 d-flex align-items-center">
+		<nav className="navbar navbar-expand-lg navbar-light bg-bg-1 d-flex align-items-center">
 			<div className="container-xxl">
 				<div className="logo">
 					<Link
@@ -26,7 +26,7 @@ const Navigation = () => {
 					className="collapse navbar-collapse gap-5"
 					id="navbarNavAltMarkup"
 				>
-					<div className="navbar-nav w-100 d-flex justify-content-end gap-5">
+					<div className="navbar-nav w-100 d-flex justify-content-end gap-5 fs-6">
 						<Link
 							className="nav-item nav-link"
 							to={PagesLinks.Home}
@@ -52,7 +52,7 @@ const Navigation = () => {
 							Contacts
 						</Link>
 					</div>
-					<div className="d-flex gap-3">
+					<div className="d-flex gap-3 fs-5">
 						<Link className="d-flex align-items-center" to="#">
 							<FiSearch />
 						</Link>

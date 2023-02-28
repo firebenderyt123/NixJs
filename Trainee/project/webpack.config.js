@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const Dotenv = require("dotenv-webpack");
 const autoprefixer = require("autoprefixer");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -17,6 +18,7 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js", ".scss"],
     alias: {
       "@images": path.resolve(__dirname, "src/resources/img/"),
+      "@fonts": path.resolve(__dirname, "src/resources/fonts/"),
     },
   },
   module: {
@@ -69,6 +71,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new Dotenv({
+      path: path.resolve(__dirname, ".env"),
+    }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       filename: "./index.html",

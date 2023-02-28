@@ -1,17 +1,29 @@
+$bg-1: #0c0116;
+$bg-2: #ffffff;
+$bg-3: #ffdd55;
+
 $color1: #0c0116;
-$color1-hover: #000000;
+$color1-hover: #202020;
 $color2: #ffffff;
 $color2-hover: #ffdd55;
-$color3: #ffdd55;
-$color3-hover: #ffcc00;
+$color3: #1c1c45;
+$github: #ffdb8f;
+$linkedin: #90ceff;
 
 $theme-colors: (
-	"primary": $color1,
-	"secondary": $color2,
-	"third": $color3,
+	"bg-1": $bg-1,
+	"bg-2": $bg-2,
+	"bg-3": $bg-3,
+	"color1": $color1,
+	"color2": $color2,
 );
 
 @import "~bootstrap/scss/bootstrap";
+
+@font-face {
+	font-family: "Montserrat";
+	src: url("@fonts/Montserrat.ttf") format("truetype");
+}
 
 ::-webkit-scrollbar {
 	width: 5px;
@@ -24,4 +36,22 @@ $theme-colors: (
 }
 ::-webkit-scrollbar-thumb:hover {
 	background: $color1-hover;
+}
+
+a,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b {
+	font-family: "Montserrat";
+}
+
+a {
+	text-decoration: none;
+	transition: all ease-in-out 0.3s;
 }
