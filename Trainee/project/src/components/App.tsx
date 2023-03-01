@@ -13,51 +13,43 @@ class App extends Component {
     render() {
         return (
             <>
-                <Router>
-                    <Routes>
-                        <Route
-                            path={PagesLinks.Home}
-                            element={
-                                <>
-                                    <AppHeader />
-                                    <AppHome />
-                                    <AppFooter />
-                                </>
-                            }
-                        />
-                        <Route
-                            path={PagesLinks.Products}
-                            element={
-                                <>
-                                    <AppHeader />
-                                    <AppProducts />
-                                    <AppFooter />
-                                </>
-                            }
-                        />
-                        <Route
-                            path={PagesLinks.About}
-                            element={
-                                <>
-                                    <AppHeader />
-                                    <AppAbout />
-                                    <AppFooter />
-                                </>
-                            }
-                        />
-                        <Route
-                            path={PagesLinks.Contacts}
-                            element={
-                                <>
-                                    <AppHeader />
-                                    <AppContacts />
-                                    <AppFooter />
-                                </>
-                            }
-                        />
-                        {/*<Route path="*" />*/}
-                    </Routes>
-                </Router>
+                <AppHeader />
+                <Routes>
+                    <Route
+                        path={PagesLinks.Home}
+                        element={
+                            <>
+                                <AppHome />
+                            </>
+                        }
+                    />
+                    <Route
+                        path={PagesLinks.Products}
+                        element={
+                            <>
+                                <AppProducts />
+                            </>
+                        }
+                    />
+                    <Route
+                        path={PagesLinks.About}
+                        element={
+                            <>
+                                <AppAbout />
+                            </>
+                        }
+                    />
+                    <Route
+                        path={PagesLinks.Contacts}
+                        element={
+                            <>
+                                <AppContacts />
+                            </>
+                        }
+                    />
+                    {/*<Route path="*" />*/}
+                </Routes>
+                <AppFooter />
             </>
         );
     }

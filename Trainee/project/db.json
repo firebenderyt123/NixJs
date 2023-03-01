@@ -1,0 +1,14 @@
+{
+	"users": [
+		{
+			"email": "fire@fire.ua",
+			"password": "$2a$10$.knKzA99AJAWjM5WdkyPD.mYIFKXx.SK.SnFbadovpfgPyx/Zcg0W",
+			"firstname": "Firebender",
+			"lastname": "YT",
+			"id": 1
+		}
+	],
+	"categories": [],
+	"products": [],
+	"tags": []
+}

@@ -7,6 +7,9 @@ $color1-hover: #202020;
 $color2: #ffffff;
 $color2-hover: #ffdd55;
 $color3: #1c1c45;
+
+$red: #f76b74;
+$blue: #abb7f3;
 $github: #ffdb8f;
 $linkedin: #90ceff;
 
@@ -16,6 +19,8 @@ $theme-colors: (
 	"bg-3": $bg-3,
 	"color1": $color1,
 	"color2": $color2,
+	"red": $red,
+	"blue": $blue,
 );
 
 @import "~bootstrap/scss/bootstrap";
@@ -54,4 +59,30 @@ b {
 a {
 	text-decoration: none;
 	transition: all ease-in-out 0.3s;
+}
+
+.dropdown {
+	border: none;
+
+	& > button {
+		transition: all ease-in-out 0.3s;
+	}
+}
+.dropdown-menu {
+	background-color: $color1;
+	box-shadow: 0px 0px 20px 0 rgba($color2, 0.2);
+	border-radius: 10px;
+}
+.dropdown-item {
+	color: $color2;
+
+	&:hover {
+		background-color: rgba($color1, 0.9);
+		color: $color2-hover;
+	}
+
+	&:focus {
+		background-color: rgba($color1, 0.8);
+		color: rgba($color2-hover, 0.8);
+	}
 }

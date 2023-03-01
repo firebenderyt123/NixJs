@@ -1,13 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaPhoneAlt } from "react-icons/fa";
+import { Dropdown, DropdownButton } from "react-bootstrap";
+import { FaPhoneAlt, FaInfo } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 import { TiSocialLinkedin, TiSocialGithub } from "react-icons/ti";
+import { CiLocationOn } from "react-icons/ci";
 // import Navigation from "./Navigation";
 import Copyright from "./Copyright";
 import "./appFooter.scss";
 
 import Logo from "@images/Bootsy.svg";
+
+function DropdownPhones() {
+    return (
+        <DropdownButton
+            title={
+                <>
+                    <FaPhoneAlt className="me-2" />
+                    (099) 123-45-67
+                </>
+            }
+            className="phones"
+        >
+            <Dropdown.Item href="tel:0991234567">
+                <FaPhoneAlt className="me-2" />
+                (099) 123-45-67
+            </Dropdown.Item>
+            <Dropdown.Item href="tel:0971234567">
+                <FaPhoneAlt className="me-2" />
+                (097) 123-45-67
+            </Dropdown.Item>
+            <Dropdown.Item href="tel:0951234567">
+                <FaPhoneAlt className="me-2" />
+                (095) 123-45-67
+            </Dropdown.Item>
+        </DropdownButton>
+    );
+}
+
+function DropdownEmails() {
+    return (
+        <DropdownButton
+            title={
+                <>
+                    <IoMailOutline className="me-2" />
+                    firebenderyt@gmail.com
+                </>
+            }
+            className="mails"
+        >
+            <Dropdown.Item href="mailto:firebenderyt@gmail.com">
+                <IoMailOutline className="me-2" />
+                firebenderyt@gmail.com
+            </Dropdown.Item>
+        </DropdownButton>
+    );
+}
 
 const AppFooter = () => {
     return (
@@ -16,38 +64,54 @@ const AppFooter = () => {
                 <div className="container">
                     <div className="mail_section">
                         <div className="row">
-                            <div className="col-sm-6 col-lg-2">
+                            <div className="col-sm-6 col-lg-3">
                                 <div className="footer-logo">
                                     <Link to="/">
                                         <Logo width="200" height="42" />
                                     </Link>
                                 </div>
                             </div>
+                            <div className="col-sm-6 col-lg-3">
+                                <div className="d-flex gap-1">
+                                    <FaInfo className="fs-4 text-blue" />
+                                    <h4 className="m-0">Information</h4>
+                                </div>
+                                <DropdownPhones />
+                                <DropdownEmails />
+                            </div>
+                            <div className="col-sm-6 col-lg-3">
+                                <div className="d-flex gap-1">
+                                    <CiLocationOn className="fs-4 text-red" />
+                                    <h4 className="m-0">Address </h4>
+                                </div>
+                                <div className="d-flex flex-column pt-1 px-3">
+                                    <span className="py-1">
+                                        No 40 Baria Sreet 15/2
+                                    </span>
+                                    <span className="py-1">
+                                        New York City, NY, United States
+                                    </span>
+                                </div>
+                            </div>
                             <div className="col-sm-6 col-lg-2">
-                                <div className="phones d-flex flex-column">
-                                    <Link to="tel:0991234567">
-                                        <FaPhoneAlt className="me-1" />
-                                        (099) 123-45-67
-                                    </Link>
-                                    <Link to="tel:0971234567">
-                                        <FaPhoneAlt className="me-1" />
-                                        (097) 123-45-67
-                                    </Link>
-                                    <Link to="tel:0951234567">
-                                        <FaPhoneAlt className="me-1" />
-                                        (095) 123-45-67
-                                    </Link>
+                                <h2 className="adderess_text">Newsletter</h2>
+                                <div className="form-group">
+                                    <input
+                                        type="text"
+                                        className="enter_email"
+                                        placeholder="Enter Your email"
+                                        name="Name"
+                                    />
                                 </div>
+                                <button className="subscribr_bt">
+                                    Subscribe
+                                </button>
                             </div>
-                            <div className="col-sm-6 col-lg-3">
-                                <div className="mails d-flex flex-column">
-                                    <Link to="mail:firebenderyt@gmail.com">
-                                        <IoMailOutline className="me-1" />
-                                        firebenderyt@gmail.com
-                                    </Link>
-                                </div>
-                            </div>
-                            <div className="col-sm-6 col-lg-3">
+                        </div>
+                    </div>
+                    <div className="footer_section_2">
+                        <div className="row mt-4">
+                            <div className="col-12">
                                 <div className="social-icons d-flex justify-content-center gap-3">
                                     <Link
                                         to="https://www.linkedin.com/in/firebenderyt/"
@@ -64,67 +128,6 @@ const AppFooter = () => {
                                         <TiSocialGithub />
                                     </Link>
                                 </div>
-                            </div>
-                            <div className="col-sm-2"></div>
-                        </div>
-                    </div>
-                    <div className="footer_section_2">
-                        <div className="row">
-                            <div className="col-sm-4 col-lg-2">
-                                <p className="dummy_text">
-                                    {" "}
-                                    ipsum dolor sit amet, consectetur ipsum
-                                    dolor sit amet, consectetur ipsum dolor sit
-                                    amet,
-                                </p>
-                            </div>
-                            <div className="col-sm-4 col-lg-2">
-                                <h2 className="shop_text">Address </h2>
-                                <div className="image-icon">
-                                    <img src="images/map-icon.png" />
-                                    <span className="pet_text">
-                                        No 40 Baria Sreet 15/2 NewYork City, NY,
-                                        United States.
-                                    </span>
-                                </div>
-                            </div>
-                            <div className="col-sm-4 col-md-6 col-lg-3">
-                                <h2 className="shop_text">Our Company </h2>
-                                <div className="delivery_text">
-                                    <ul>
-                                        <li>Delivery</li>
-                                        <li>Legal Notice</li>
-                                        <li>About us</li>
-                                        <li>Secure payment</li>
-                                        <li>Contact us</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-sm-6 col-lg-3">
-                                <h2 className="adderess_text">Products</h2>
-                                <div className="delivery_text">
-                                    <ul>
-                                        <li>Prices drop</li>
-                                        <li>New products</li>
-                                        <li>Best sales</li>
-                                        <li>Contact us</li>
-                                        <li>Sitemap</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-sm-6 col-lg-2">
-                                <h2 className="adderess_text">Newsletter</h2>
-                                <div className="form-group">
-                                    <input
-                                        type="text"
-                                        className="enter_email"
-                                        placeholder="Enter Your email"
-                                        name="Name"
-                                    />
-                                </div>
-                                <button className="subscribr_bt">
-                                    Subscribe
-                                </button>
                             </div>
                         </div>
                     </div>

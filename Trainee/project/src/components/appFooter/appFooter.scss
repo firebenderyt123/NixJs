@@ -1,14 +1,18 @@
 .section_footer {
-	.phones a,
-	.mails a,
+	.phones,
+	.mails {
+		button {
+			color: $color2;
+
+			&:hover {
+				color: $color2-hover;
+			}
+		}
+	}
 	.social-icons a {
 		display: flex;
 		align-items: center;
 		color: $color2;
-	}
-	.phones a:hover,
-	.mails a:hover {
-		color: $color2-hover;
 	}
 	.social-icons {
 		font-size: 3rem;

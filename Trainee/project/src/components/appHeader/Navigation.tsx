@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FiSearch, FiShoppingBag } from "react-icons/fi";
+import { RiAccountCircleLine } from "react-icons/ri";
 
 import PagesLinks from "../../enums/pagesLinks";
 import AppHome from "../pages/Home/AppHome";
@@ -58,6 +59,9 @@ const Navigation = () => {
 						</Link>
 						<Link className="d-flex align-items-center" to="#">
 							<FiShoppingBag />
+						</Link>
+						<Link className="d-flex align-items-center" to="#">
+							<RiAccountCircleLine />
 						</Link>
 					</div>
 				</div>
