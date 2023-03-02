@@ -16,8 +16,11 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".scss"],
     alias: {
-      "@images": path.resolve(__dirname, "src/resources/img/"),
-      "@fonts": path.resolve(__dirname, "src/resources/fonts/"),
+      "@images": path.resolve(__dirname, "src/assets/images/"),
+      "@fonts": path.resolve(__dirname, "src/assets/fonts/"),
+      "@components": path.resolve(__dirname, "src/components/"),
+      "@pages": path.resolve(__dirname, "src/pages/"),
+      "@core": path.resolve(__dirname, "src/core"),
     },
   },
   module: {
@@ -51,7 +54,7 @@ module.exports = {
           {
             loader: "sass-resources-loader",
             options: {
-              resources: ["./src/styles/style.scss"],
+              resources: ["./src/styles/styles.scss"],
             },
           },
         ],

@@ -14,7 +14,10 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "paths": {
-      "@images/*": ["./src/resources/img/*"]
+      "@images/*": ["./src/assets/images/*"],
+      "@components/*": ["./src/components/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@core/*": ["./src/core/*"]
     }
   },
   "include": ["globals.d.ts", "src/**/*"],

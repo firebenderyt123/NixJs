@@ -1,35 +1,27 @@
 const jsonServer = require("json-server");
 const auth = require("json-server-auth");
-const { issueJWT } = require("json-server-auth");
 
+// const router = auth.router;
 const server = jsonServer.create();
 const router = jsonServer.router("db.json");
-// const middlewares = jsonServer.defaults();
+const middlewares = jsonServer.defaults();
 
-// server.use(middlewares);
+const PORT = 5000;
+
 server.db = router.db;
-// server.use(
-//   jsonServer.rewriter({
-//     "/api/*": "/$1",
-//     "/blog/:resource/:id/show": "/:resource/:id",
-//   })
-// );
 
-// server.post("/login", (req, res) => {
-//   const { email, password } = req.body;
-//   const user = server.db.get("users").find({ email, password }).value();
+// Set custom path for login
+const loginPath = "/login";
+const registerPath = "/register";
 
-//   if (user) {
-//     const accessToken = issueJWT({ userId: user.id });
-//     res.jsonp({ accessToken });
-//   } else {
-//     res.status(401).jsonp({ error: "Invalid credentials" });
-//   }
-// });
+// Add custom routes before JSON Server router
+server.post(loginPath, (req, res) => auth.authenticateUser);
+server.post(registerPath, (req, res) => auth.registerUser);
 
-server.use("/api", auth);
+server.use("/api", middlewares);
+server.use("/api/users", auth);
 server.use("/api", router);
 
-server.listen(5000, () => {
-  console.log("JSON Server is running");
+server.listen(PORT, () => {
+  console.log(`JSON Server is running on port ${PORT}`);
 });

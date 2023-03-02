@@ -9,6 +9,24 @@
 		}
 	],
 	"categories": [],
-	"products": [],
+	"products": [
+		{
+			"id": 1,
+			"title": "test",
+			"thumb": "httsd",
+			"description": "fdsfd",
+			"price": 0.99,
+			"currency": "UAH",
+			"params": []
+		},
+		{
+			"id": 2,
+			"title": "test2",
+			"description": "xyz",
+			"price": 2.99,
+			"currency": "UAH",
+			"params": []
+		}
+	],
 	"tags": []
 }

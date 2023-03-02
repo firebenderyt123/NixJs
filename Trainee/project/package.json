@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.tsx",
   "scripts": {
-    "sitemap": "webpack serve --config webpack.config.sitemap.js",
     "start": "webpack serve --mode development --open",
     "clean": "npm cache clean --force",
     "build": "webpack --mode production",
