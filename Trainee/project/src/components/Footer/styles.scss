@@ -21,6 +21,8 @@
 			box-shadow: none;
 			border-radius: 10px;
 			filter: none;
+			transition: filter 0.3s ease-in-out, color 0.3s ease-in-out,
+				box-shadow 0.3s ease-in-out;
 			&.github:hover {
 				color: $github;
 				box-shadow: 0px 0px 5px 0px rgba($github, 0.7);

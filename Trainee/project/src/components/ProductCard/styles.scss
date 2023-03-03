@@ -1,0 +1,20 @@
+.product {
+	&__info__container {
+		height: inherit;
+	}
+	&__price {
+		font-weight: 700;
+	}
+	&__buy-btn,
+	&__view-btn {
+		margin: 0;
+		transition: color 0.3s ease-in-out, transform 0.3s ease-in-out,
+			box-shadow 0.3s ease-in-out;
+
+		&:hover {
+			color: $color2-hover;
+			transform: translateY(-2px);
+			box-shadow: 0px 2px 20px 0px #00000054;
+		}
+	}
+}

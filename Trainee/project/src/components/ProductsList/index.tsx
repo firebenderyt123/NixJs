@@ -14,7 +14,10 @@ const ProductsList = ({ loading, products, error, loadProducts }) => {
     const content = !(loading || error) ? (
         <>
             {products.map((product) => (
-                <div className="col-4" key={product.id}>
+                <div
+                    className="col-12 col-sm-6 col-lg-4 col-xxl-3 d-flex align-items-stretch p-2"
+                    key={product.id}
+                >
                     <ProductCard product={product} />
                 </div>
             ))}
