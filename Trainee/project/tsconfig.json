@@ -16,8 +16,9 @@
     "paths": {
       "@images/*": ["./src/assets/images/*"],
       "@components/*": ["./src/components/*"],
+      "@core/*": ["./src/core/*"],
       "@pages/*": ["./src/pages/*"],
-      "@core/*": ["./src/core/*"]
+      "@routes/*": ["./src/routes/*"]
     }
   },
   "include": ["globals.d.ts", "src/**/*"],

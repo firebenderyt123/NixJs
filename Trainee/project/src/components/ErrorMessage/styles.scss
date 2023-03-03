@@ -1,0 +1,13 @@
+.error {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		min-width: 300px;
+		max-width: 320px !important;
+		box-shadow: 0 0 5px 0 $purple;
+		border-radius: 100%;
+		filter: drop-shadow(2px 4px 6px rgba($purple, 0.7));
+	}
+}

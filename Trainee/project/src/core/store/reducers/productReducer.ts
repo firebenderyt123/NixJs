@@ -6,6 +6,7 @@ const initialState: State["product"] = {
     products: false,
   },
   products: [],
+  error: null,
 };
 
 const productReducer = (state = initialState, action: Action) => {
@@ -22,6 +23,7 @@ const productReducer = (state = initialState, action: Action) => {
     case "loadProductsError":
       return produce(state, (draft) => {
         draft.loading.products = false;
+        draft.error = action.error;
       });
     default:
       return state;

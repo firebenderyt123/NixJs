@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FiSearch, FiShoppingBag } from "react-icons/fi";
 import { RiAccountCircleLine } from "react-icons/ri";
 
-import PagesLinks from "@core/enums/pagesLinks";
+import { Links } from "@core/enums";
 
 import Logo from "@images/Bootsy.svg";
 
@@ -14,7 +14,7 @@ const Navigation = () => {
 				<div className="logo">
 					<Link
 						className="navbar-brand d-flex align-items-center"
-						to={PagesLinks.Home}
+						to={Links.Home}
 					>
 						<Logo width="150" height="32" />
 					</Link>
@@ -24,28 +24,16 @@ const Navigation = () => {
 					id="navbarNavAltMarkup"
 				>
 					<div className="navbar-nav w-100 d-flex justify-content-end gap-5 fs-6">
-						<Link
-							className="nav-item nav-link"
-							to={PagesLinks.Home}
-						>
+						<Link className="nav-item nav-link" to={Links.Home}>
 							Home
 						</Link>
-						<Link
-							className="nav-item nav-link"
-							to={PagesLinks.Products}
-						>
+						<Link className="nav-item nav-link" to={Links.Products}>
 							Products
 						</Link>
-						<Link
-							className="nav-item nav-link"
-							to={PagesLinks.About}
-						>
+						<Link className="nav-item nav-link" to={Links.About}>
 							About Us
 						</Link>
-						<Link
-							className="nav-item nav-link"
-							to={PagesLinks.Contacts}
-						>
+						<Link className="nav-item nav-link" to={Links.Contacts}>
 							Contacts
 						</Link>
 					</div>

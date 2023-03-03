@@ -10,6 +10,7 @@ $color3: #1c1c45;
 
 $red: #f76b74;
 $blue: #abb7f3;
+$purple: #a575d9;
 $github: #ffdb8f;
 $linkedin: #90ceff;
 
@@ -21,6 +22,7 @@ $theme-colors: (
 	"color2": $color2,
 	"red": $red,
 	"blue": $blue,
+	"purple": $purple,
 );
 
 @import "~bootstrap/scss/bootstrap";

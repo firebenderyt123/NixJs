@@ -1,6 +1,4 @@
-import { ThunkAction } from "redux-thunk";
-import { Product } from "@core/models";
-import { State as ProductState, Action as ProductAction } from "../types";
+import { Product, Error } from "@core/models";
 import {
   LoadProductsRequest,
   LoadProductsSuccess,
@@ -18,25 +16,7 @@ export const loadProductsSuccess = (
   products,
 });
 
-export const loadProductsError = (): LoadProductsError => ({
+export const loadProductsError = (error: Error): LoadProductsError => ({
   type: "loadProductsError",
+  error,
 });
-
-type Effect<R> = ThunkAction<R, ProductState, undefined, ProductAction>;
-
-export const loadProducts = (): Effect<void> => async (dispatch) => {
-  try {
-    dispatch<LoadProductsRequest>({ type: "loadProductsRequest" });
-
-    const response = await fetch("http://localhost:5000/api/products/");
-    const data = await response.json();
-
-    dispatch<LoadProductsSuccess>({
-      type: "loadProductsSuccess",
-      products: data,
-    });
-  } catch (error) {
-    console.log(error);
-    dispatch<LoadProductsError>({ type: "loadProductsError" });
-  }
-};

@@ -19,8 +19,9 @@ module.exports = {
       "@images": path.resolve(__dirname, "src/assets/images/"),
       "@fonts": path.resolve(__dirname, "src/assets/fonts/"),
       "@components": path.resolve(__dirname, "src/components/"),
-      "@pages": path.resolve(__dirname, "src/pages/"),
       "@core": path.resolve(__dirname, "src/core"),
+      "@pages": path.resolve(__dirname, "src/pages/"),
+      "@routes": path.resolve(__dirname, "src/routes/"),
     },
   },
   module: {
@@ -60,7 +61,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|webp)$/i,
         type: "asset/resource",
         generator: {
           filename: "images/[name][ext][query]",

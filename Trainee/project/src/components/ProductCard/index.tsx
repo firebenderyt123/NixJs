@@ -1,34 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Product } from "@core/models";
+import { Image } from "@components/ui";
 import "./styles.scss";
 
-import defaultThumb from "@images/Bootsy_black.png";
-
 const ProductCard = ({ product }) => {
-    let id = product.id;
-    let thumb = product.thumb === undefined ? defaultThumb : product.thumb;
-    let title = product.title;
-    let description = product.description;
-    let price = product.price;
-    let currency = product.currency;
-
     return (
-        <div id={`product_${id}`} className="card product__card">
-            <img
+        <div id={`product_${product.id}`} className="card product__card">
+            <Image
                 className="product__thumb card-img-top"
-                src={thumb}
-                alt={title}
+                src={product.thumb}
+                alt={product.title}
             />
             <div className="card-body">
-                <h2 className="product__title card-title">{title}</h2>
-                <p className="product__description card-text">{description}</p>
+                <h2 className="product__title card-title">{product.title}</h2>
+                <p className="product__description card-text">
+                    {product.description}
+                </p>
                 <p className="product__price">
-                    {price} {currency}
+                    {product.price} {product.currency}
                 </p>
                 <div className="product__btn__container">
                     <button className="btn btn-color1">Buy</button>
-                    <Link className="btn btn-color1" to={`products/?id=${id}`}>
+                    <Link
+                        className="btn btn-color1"
+                        to={`products/:id=${product.id}`}
+                    >
                         View
                     </Link>
                 </div>

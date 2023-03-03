@@ -12,20 +12,112 @@
 	"products": [
 		{
 			"id": 1,
-			"title": "test",
-			"thumb": "httsd",
-			"description": "fdsfd",
-			"price": 0.99,
+			"title": "Black leather boots",
+			"thumb": "/uploads/images/error.png",
+			"description": "These stylish boots are made from high-quality leather and feature a durable rubber sole. Perfect for any occasion!",
+			"price": 2000,
 			"currency": "UAH",
-			"params": []
+			"params": [
+				{ "name": "Material", "value": "Leather" },
+				{ "name": "Color", "value": "Black" },
+				{ "name": "Size", "value": "8" },
+				{ "name": "Brand", "value": "Acme" }
+			]
 		},
 		{
 			"id": 2,
-			"title": "test2",
-			"description": "xyz",
-			"price": 2.99,
+			"title": "Brown suede boots",
+			"thumb": "https://example.com/brown_suede_boots.jpg",
+			"description": "Stay comfortable and stylish in these brown suede boots. They feature a soft, cushioned footbed and a sturdy rubber outsole.",
+			"price": 2500,
 			"currency": "UAH",
-			"params": []
+			"params": [
+				{ "name": "Material", "value": "Suede" },
+				{ "name": "Color", "value": "Brown" },
+				{ "name": "Size", "value": "9" },
+				{ "name": "Brand", "value": "Bates" }
+			]
+		},
+		{
+			"id": 3,
+			"title": "Waterproof hiking boots",
+			"thumb": "https://example.com/waterproof_hiking_boots.jpg",
+			"description": "Take on any terrain with these waterproof hiking boots. They feature a breathable mesh upper and a rugged rubber outsole.",
+			"price": 3000,
+			"currency": "UAH",
+			"params": [
+				{ "name": "Material", "value": "Leather/Mesh" },
+				{ "name": "Color", "value": "Gray/Blue" },
+				{ "name": "Size", "value": "10" },
+				{ "name": "Brand", "value": "Merrell" }
+			]
+		},
+		{
+			"id": 4,
+			"title": "Winter boots",
+			"thumb": "https://example.com/winter_boots.jpg",
+			"description": "Stay warm and cozy all winter long in these insulated boots. They feature a waterproof nylon upper and a plush faux-fur lining.",
+			"price": 3500,
+			"currency": "UAH",
+			"params": [
+				{ "name": "Material", "value": "Nylon/Faux-fur" },
+				{ "name": "Color", "value": "Black" },
+				{ "name": "Size", "value": "7" },
+				{ "name": "Brand", "value": "Columbia" }
+			]
+		},
+		{
+			"id": 5,
+			"title": "Cowboy boots",
+			"thumb": "https://example.com/cowboy_boots.jpg",
+			"description": "Get a classic western look with these cowboy boots. They feature a pointed toe and a decorative stitching detail.",
+			"price": 2800,
+			"currency": "UAH",
+			"params": [
+				{ "name": "Material", "value": "Leather" },
+				{ "name": "Color", "value": "Brown" },
+				{ "name": "Size", "value": "8.5" },
+				{ "name": "Brand", "value": "Ariat" }
+			]
+		},
+		{
+			"id": 6,
+			"title": "Leather Ankle Boots",
+			"thumb": "/images/boots4.jpg",
+			"description": "Genuine leather ankle boots with a 2-inch heel. Available in black and brown.",
+			"price": 1999.99,
+			"currency": "UAH",
+			"params": [
+				{ "name": "Material", "value": "Leather" },
+				{ "name": "Heel Height", "value": "2 inches" },
+				{ "name": "Color Options", "value": "Black, Brown" }
+			]
+		},
+		{
+			"id": 7,
+			"title": "Lace-up Combat Boots",
+			"thumb": "/images/boots5.jpg",
+			"description": "Sturdy lace-up combat boots with a chunky sole. Available in black and brown.",
+			"price": 1499.99,
+			"currency": "UAH",
+			"params": [
+				{ "name": "Material", "value": "Synthetic Leather" },
+				{ "name": "Sole Height", "value": "1.5 inches" },
+				{ "name": "Color Options", "value": "Black, Brown" }
+			]
+		},
+		{
+			"id": 8,
+			"title": "Faux Suede Over-the-Knee Boots",
+			"thumb": "/images/boots6.jpg",
+			"description": "Soft faux suede over-the-knee boots with a high heel. Available in black and taupe.",
+			"price": 2599.99,
+			"currency": "UAH",
+			"params": [
+				{ "name": "Material", "value": "Faux Suede" },
+				{ "name": "Heel Height", "value": "4 inches" },
+				{ "name": "Color Options", "value": "Black, Taupe" }
+			]
 		}
 	],
 	"tags": []

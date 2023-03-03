@@ -1,4 +1,5 @@
 import React from "react";
+import { Image } from "@components/ui";
 import "./styles.scss";
 
 import Shoe from "@images/running-shoes.png";
@@ -10,7 +11,7 @@ const HugeBanner = () => {
 				<section className="slide-wrapper">
 					<div className="container-fluid">
 						<div className="huge-banner__img position-absolute top-0 start-0">
-							{/*<img src={BgBanner} className="w-inherit" />*/}
+							{/*<Image src={BgBanner} className="w-inherit" />*/}
 						</div>
 						<div
 							id="myCarousel"
@@ -66,7 +67,7 @@ const HugeBanner = () => {
 										</div>
 										<div className="col-sm-5">
 											<div className="shoes_img">
-												<img src={Shoe} />
+												<Image src={Shoe} />
 											</div>
 										</div>
 									</div>
@@ -109,7 +110,7 @@ const HugeBanner = () => {
 										</div>
 										<div className="col-sm-5">
 											<div className="shoes_img">
-												<img src={Shoe} />
+												<Image src={Shoe} />
 											</div>
 										</div>
 									</div>
@@ -152,7 +153,7 @@ const HugeBanner = () => {
 										</div>
 										<div className="col-sm-5">
 											<div className="shoes_img">
-												<img src={Shoe} />
+												<Image src={Shoe} />
 											</div>
 										</div>
 									</div>
@@ -195,7 +196,7 @@ const HugeBanner = () => {
 										</div>
 										<div className="col-sm-5">
 											<div className="shoes_img">
-												<img src={Shoe} />
+												<Image src={Shoe} />
 											</div>
 										</div>
 									</div>
