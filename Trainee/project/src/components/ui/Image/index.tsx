@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./styles.scss";
 
 import defaultImage from "@images/defaultImage.webp";
 
@@ -19,7 +18,7 @@ const Image = ({ src, alt, defaultImg, ...props }: ImageProps) => {
 	};
 
 	const handleError = () => {
-		setImageSrc(defaultImg || defaultImage);
+		setImageSrc(defaultImg || defaultImage.src);
 	};
 
 	return (

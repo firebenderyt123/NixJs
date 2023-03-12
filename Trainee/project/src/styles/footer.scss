@@ -1,0 +1,53 @@
+.section_footer {
+	.phones,
+	.mails {
+		button {
+			color: $color2;
+
+			&:hover {
+				color: $color2-hover;
+			}
+		}
+	}
+	.social-icons a {
+		display: flex;
+		align-items: center;
+		color: $color2;
+	}
+	.social-icons {
+		font-size: 3rem;
+		a {
+			background: $bg-1;
+			box-shadow: none;
+			border-radius: 10px;
+			filter: none;
+			transition: filter $transition-delta ease-in-out,
+				color $transition-delta ease-in-out,
+				box-shadow $transition-delta ease-in-out;
+			&.github:hover {
+				color: $github;
+				box-shadow: 0px 0px 5px 0px rgba($github, 0.7),
+					2px 1px 40px 0 $github;
+				z-index: 2;
+			}
+			&.linkedin:hover {
+				color: $linkedin;
+				box-shadow: 0px 0px 5px 0px rgba($linkedin, 0.7),
+					2px 1px 40px 0 $linkedin;
+				z-index: 2;
+			}
+		}
+	}
+	.footer-logo {
+		filter: invert(1);
+	}
+}
+.copyright {
+	a {
+		color: $color1;
+		font-weight: 500;
+	}
+	a:hover {
+		color: $color3;
+	}
+}

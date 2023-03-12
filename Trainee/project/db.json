@@ -83,7 +83,7 @@
 		{
 			"id": 6,
 			"title": "Leather Ankle Boots",
-			"thumb": "/images/boots4.jpg",
+			"thumb": "/uploads/images/boots4.jpg",
 			"description": "Genuine leather ankle boots with a 2-inch heel. Available in black and brown.",
 			"price": 1999.99,
 			"currency": "UAH",
@@ -96,7 +96,7 @@
 		{
 			"id": 7,
 			"title": "Lace-up Combat Boots",
-			"thumb": "/images/boots5.jpg",
+			"thumb": "/uploads/images/boots5.jpg",
 			"description": "Sturdy lace-up combat boots with a chunky sole. Available in black and brown.",
 			"price": 1499.99,
 			"currency": "UAH",
@@ -109,7 +109,7 @@
 		{
 			"id": 8,
 			"title": "Faux Suede Over-the-Knee Boots",
-			"thumb": "/images/boots6.jpg",
+			"thumb": "/uploads/images/boots6.jpg",
 			"description": "Soft faux suede over-the-knee boots with a high heel. Available in black and taupe.",
 			"price": 2599.99,
 			"currency": "UAH",

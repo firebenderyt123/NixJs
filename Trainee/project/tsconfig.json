@@ -4,8 +4,11 @@
     "baseUrl": "./",
     "target": "es6",
     "module": "esnext",
-    "lib": ["es6", "dom"],
-    "jsx": "react",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "jsx": "preserve",
     "sourceMap": true,
     "noImplicitAny": false,
     "emitDecoratorMetadata": true,
@@ -14,13 +17,34 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "paths": {
-      "@images/*": ["./src/assets/images/*"],
-      "@components/*": ["./src/components/*"],
-      "@core/*": ["./src/core/*"],
-      "@pages/*": ["./src/pages/*"],
-      "@routes/*": ["./src/routes/*"]
-    }
+      "@images/*": [
+        "./src/assets/images/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@core/*": [
+        "./src/core/*"
+      ],
+      "@pages/*": [
+        "./src/pages/*"
+      ],
+      "@routes/*": [
+        "./src/routes/*"
+      ]
+    },
+    "allowJs": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "isolatedModules": true
   },
-  "include": ["globals.d.ts", "src/**/*"],
-  "exclude": ["node_modules"]
+  "include": [
+    "globals.d.ts",
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

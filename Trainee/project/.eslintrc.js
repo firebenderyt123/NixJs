@@ -1,30 +1,31 @@
 module.exports = {
-  root: true,
-  parser: "@typescript-eslint/parser",
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+  },
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@next/next/recommended",
+  ],
+  globals: {
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly",
+  },
   parserOptions: {
-    ecmaVersion: 2021,
-    sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },
+    ecmaVersion: 2018,
+    sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "react", "react-hooks"],
-  extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-  ],
-  settings: {
-    "import/resolver": {
-      alias: {
-        map: [["@images", "./src/resources/img"]],
-        extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
-      },
-    },
-    react: {
-      version: "detect",
-    },
+  plugins: ["react", "react-hooks", "@next/next"],
+  rules: {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off",
+    "no-console": "warn",
   },
-  rules: {},
 };
